@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATIONALITY</title>
+</head>
+<body>
+    <h1>Are You Brazilian?</h1>
+    Enter your country of birth: <input type="text" name="txtcountry" id="txtcountry">.
+    <input type="button" value="check" onclick="checkNationality()">
+    <div id="result"></div>
+    <script>
+        
+        function checkNationality() {
+            var txtcountry = document.querySelector("#txtcountry")
+            var result = document.querySelector("#result")
+            var countryOfBirth = txtcountry.value
+            result.innerHTML = `<p>You're born in <strong>${countryOfBirth}</strong>.</p>`
+            if(countryOfBirth == "Brazil" || countryOfBirth == "Brasil") {
+                result.innerHTML += `<p>You're <strong>brazilian</strong>!</p>`
+            } else {
+                result.innerHTML += `<p>You're a <strong>stranger</strong>!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
